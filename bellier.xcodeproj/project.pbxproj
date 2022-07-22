@@ -13,6 +13,7 @@
 		B6DAC931288B1FF70024FF4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DAC930288B1FF70024FF4A /* Preview Assets.xcassets */; };
 		B6DAC93B288B20730024FF4A /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAC93A288B20730024FF4A /* Networker.swift */; };
 		B6DAC93D288B210A0024FF4A /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAC93C288B210A0024FF4A /* Services.swift */; };
+		B6DAC93F288B21FE0024FF4A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAC93E288B21FE0024FF4A /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B6DAC930288B1FF70024FF4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6DAC93A288B20730024FF4A /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		B6DAC93C288B210A0024FF4A /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		B6DAC93E288B21FE0024FF4A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DAC93A288B20730024FF4A /* Networker.swift */,
+				B6DAC93E288B21FE0024FF4A /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				B6DAC93D288B210A0024FF4A /* Services.swift in Sources */,
 				B6DAC92A288B1FF30024FF4A /* bellierApp.swift in Sources */,
 				B6DAC93B288B20730024FF4A /* Networker.swift in Sources */,
+				B6DAC93F288B21FE0024FF4A /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
