@@ -7,7 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+final class ContentViewModel: ObservableObject {
+    private(set) var services: Services
+    init(services: Services) {
+        self.services = services
+    }
+}
+
+struct ContentView<viewModel: ContentViewModel>: View {
+    private(set) var viewModel: viewModel
     var body: some View {
         Text("Hello, world!")
             .padding()
@@ -16,6 +24,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: ContentViewModel(services: .init()))
     }
 }

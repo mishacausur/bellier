@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct bellierApp: App {
+    let services: Services = .init()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: .init(services: .init()))
         }
     }
 }

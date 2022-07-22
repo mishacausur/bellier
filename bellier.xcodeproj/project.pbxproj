@@ -11,6 +11,8 @@
 		B6DAC92C288B1FF30024FF4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAC92B288B1FF30024FF4A /* ContentView.swift */; };
 		B6DAC92E288B1FF70024FF4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DAC92D288B1FF70024FF4A /* Assets.xcassets */; };
 		B6DAC931288B1FF70024FF4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DAC930288B1FF70024FF4A /* Preview Assets.xcassets */; };
+		B6DAC93B288B20730024FF4A /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAC93A288B20730024FF4A /* Networker.swift */; };
+		B6DAC93D288B210A0024FF4A /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAC93C288B210A0024FF4A /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		B6DAC92B288B1FF30024FF4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B6DAC92D288B1FF70024FF4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6DAC930288B1FF70024FF4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B6DAC93A288B20730024FF4A /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		B6DAC93C288B210A0024FF4A /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,14 @@
 		B6DAC928288B1FF30024FF4A /* bellier */ = {
 			isa = PBXGroup;
 			children = (
+				B6DAC939288B20630024FF4A /* Views */,
+				B6DAC938288B205B0024FF4A /* Models */,
+				B6DAC937288B20480024FF4A /* Network */,
 				B6DAC929288B1FF30024FF4A /* bellierApp.swift */,
 				B6DAC92B288B1FF30024FF4A /* ContentView.swift */,
 				B6DAC92D288B1FF70024FF4A /* Assets.xcassets */,
 				B6DAC92F288B1FF70024FF4A /* Preview Content */,
+				B6DAC93C288B210A0024FF4A /* Services.swift */,
 			);
 			path = bellier;
 			sourceTree = "<group>";
@@ -65,6 +73,28 @@
 				B6DAC930288B1FF70024FF4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B6DAC937288B20480024FF4A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B6DAC93A288B20730024FF4A /* Networker.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B6DAC938288B205B0024FF4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6DAC939288B20630024FF4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6DAC92C288B1FF30024FF4A /* ContentView.swift in Sources */,
+				B6DAC93D288B210A0024FF4A /* Services.swift in Sources */,
 				B6DAC92A288B1FF30024FF4A /* bellierApp.swift in Sources */,
+				B6DAC93B288B20730024FF4A /* Networker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
