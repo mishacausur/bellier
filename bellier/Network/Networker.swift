@@ -22,11 +22,11 @@ final class Networker {
         }
     }
     
-    func descriptionRequest(urls: [String]) async -> AnyPublisher<[String], Error> {
+    func descriptionRequest<T: Decodable>(urls: [String]) async -> AnyPublisher<[T], Error> {
         let urls = urls.compactMap { URL.init(string: $0) }
         return URLSession.shared.dataTaskPublisher(for: urls[0])
             .map { $0.0 }
-            .decode(type: [String].self, decoder: JSONDecoder())
+            .decode(type: [T].self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }
