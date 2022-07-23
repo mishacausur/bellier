@@ -6,11 +6,24 @@
 //
 
 import SwiftUI
+import Combine
 
 final class ContentViewModel: ObservableObject {
     private(set) var services: Services
+    private let url = ""
     init(services: Services) {
         self.services = services
+    }
+    
+    func getData() {
+        await services.networker.titleRequest(url: url) { [weak self] result -> [String] in
+            switch result {
+            case .success(let title):
+                return await self?.services.networker.descriptionRequest(urls: [title]) { description -> AnyPublisher<[String], Error>}
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
