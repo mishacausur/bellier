@@ -11,15 +11,21 @@ import Combine
 final class ContentViewModel: ObservableObject {
     private(set) var services: Services
     private let url = ""
+    private(set) var dect: [String] = .init()
     init(services: Services) {
         self.services = services
     }
     
-    func getData() {
-        await services.networker.titleRequest(url: url) { [weak self] result -> [String] in
-            switch result {
+    func getData() async {
+        await services.networker.titleRequest(url: url) { [weak self] in
+            switch $0 {
             case .success(let title):
-                return await self?.services.networker.descriptionRequest(urls: [title]) { description -> AnyPublisher<[String], Error>}
+                await self?.services.networker.descriptionRequest(urls: [title])
+                    .sink(receiveCompletion: { _ in
+                    },
+                          receiveValue: { result in
+                    self?.dect = result
+                })
             case .failure(let error):
                 print(error)
             }
