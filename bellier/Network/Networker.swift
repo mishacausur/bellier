@@ -22,7 +22,7 @@ final class Networker {
         }
     }
     
-    func descriptionRequest(urls: [String]) async -> AnyPublisher<[String], Error> {
+    func descriptionRequest<T>(urls: [T]) async where T: (Decodable) -> AnyPublisher<[T], Error> {
         let urls = urls.compactMap { URL.init(string: $0) }
         return URLSession.shared.dataTaskPublisher(for: urls[0])
             .map { $0.0 }
