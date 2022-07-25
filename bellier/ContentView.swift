@@ -12,15 +12,17 @@ final class ContentViewModel: ObservableObject {
     private(set) var services: Services
     private let url = ""
     private(set) var dect: [String] = .init()
+    private var cancellables: AnyCancellable?
     init(services: Services) {
         self.services = services
     }
     
     func getData() async {
         await services.networker.titleRequest(url: url) { [weak self] in
+            defer { withExtendedLifetime(self) {} }
             switch $0 {
             case .success(let title):
-                await self?.services.networker.descriptionRequest(urls: [title])
+                self?.cancellables = await self?.services.networker.descriptionRequest(urls: [title])
                     .sink(receiveCompletion: { _ in
                     },
                           receiveValue: { result in
