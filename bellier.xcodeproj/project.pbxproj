@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B613D30B289069310098351F /* MockDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B613D30A289069310098351F /* MockDataModel.swift */; };
+		B613D3302893E92B0098351F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B613D32F2893E92B0098351F /* Request.swift */; };
+		B613D3322893EB470098351F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B613D3312893EB470098351F /* APIClient.swift */; };
 		B6DAC92A288B1FF30024FF4A /* bellierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAC929288B1FF30024FF4A /* bellierApp.swift */; };
 		B6DAC92C288B1FF30024FF4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAC92B288B1FF30024FF4A /* ContentView.swift */; };
 		B6DAC92E288B1FF70024FF4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DAC92D288B1FF70024FF4A /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		B613D30A289069310098351F /* MockDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataModel.swift; sourceTree = "<group>"; };
+		B613D32F2893E92B0098351F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B613D3312893EB470098351F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B6DAC926288B1FF30024FF4A /* bellier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bellier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DAC929288B1FF30024FF4A /* bellierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bellierApp.swift; sourceTree = "<group>"; };
 		B6DAC92B288B1FF30024FF4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				B6DAC93A288B20730024FF4A /* Networker.swift */,
+				B613D32F2893E92B0098351F /* Request.swift */,
+				B613D3312893EB470098351F /* APIClient.swift */,
 				B6DAC93E288B21FE0024FF4A /* NetworkError.swift */,
 			);
 			path = Network;
@@ -176,7 +182,9 @@
 				B6DAC92C288B1FF30024FF4A /* ContentView.swift in Sources */,
 				B6DAC93D288B210A0024FF4A /* Services.swift in Sources */,
 				B6DAC92A288B1FF30024FF4A /* bellierApp.swift in Sources */,
+				B613D3322893EB470098351F /* APIClient.swift in Sources */,
 				B613D30B289069310098351F /* MockDataModel.swift in Sources */,
+				B613D3302893E92B0098351F /* Request.swift in Sources */,
 				B6DAC93B288B20730024FF4A /* Networker.swift in Sources */,
 				B6DAC93F288B21FE0024FF4A /* NetworkError.swift in Sources */,
 			);
